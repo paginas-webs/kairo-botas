@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>KAIRO | Botas✨</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="botas.css">
+</head>
+
+<body>
+
+<!-- ANIMACIÓN AGREGAR AL CARRITO -->
+<div id="cart-anim" class="cart-anim">✔ Agregado al carrito</div>
+
+<!-- BANNER PROMOCIÓN -->
+<div class="promo-banner">
+  🚚 Envío gratis en compras superiores a $80.000 &nbsp;|&nbsp; ✨ Nueva colección disponible
+</div>
+
+<!-- MODAL FOTO -->
+<div id="img-modal" class="img-modal">
+  <div class="img-modal-overlay"></div>
+  <div class="img-modal-box">
+    <button id="img-modal-close">✖</button>
+    <img id="img-modal-img" src="" alt="">
+    <p id="img-modal-title"></p>
+  </div>
+</div>
+
+<!--HEADER/TOPBAR-->
+<header>  
+  <button id="menu-btn">☰</button>
+  <button id="cart-btn">
+    🛒 <span id="cart-count">0</span>
+  </button>
+</header>
+
+<!--SIDEBAR-->
+<nav id="sidebar" class="sidebar">
+  <a href="#">Inicio</a>
+  <a href="#products">Productos</a>
+  <a href="#favoritos">Favoritos</a>
+  <a href="#resenas">Reseñas</a>
+</nav>
+
+<!--CARRITO-->
+<aside id="cart" class="cart">
+  <button id="close-cart">✖</button>
+  <p class="cart-title">Tu carrito</p>
+
+  <!-- ITEMS -->
+  <div id="cart-items"></div>
+
+  <!-- RESUMEN -->
+  <div class="cart-summary">
+    <div class="subtotal">
+      <span>Subtotal</span>
+      <span>$<span id="cart-total">0</span></span>
+    </div>
+    <p class="discount-text">Los descuentos se aplicarán en el carrito</p>
+  </div>
+
+  <!-- BOTÓN -->
+  <button id="buy-btn">Finalizar compra</button>
+</aside>
+
+
+<!--HERO-->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-tag">✨ Nueva colección 2025</p>
+    <h1>TU MEJOR<br>ELECCIÓN<br>EN BOTAS</h1>
+    <p class="hero-sub">Comodidad y estilo en cada paso</p>
+    <a href="#products" class="hero-btn">Ver colección</a>
+  </div>
+</section>
+
+<!--PRODUCTOS-->
+<section class="products" id="products">
+  <h2>NUESTROS PRODUCTOS</h2>
+
+  <div class="grid">
+
+    <div class="card fade-in">
+      <img src="bota1.jpg" alt="Bota Cuero Negra con hebillas">
+      <div class="card-badge badge-nuevo">NUEVO</div><h3>Bota Cuero Negra</h3>
+      <p class="card-desc">Cuero vacuno con hebillas metálicas, taco bajo, ideal para el día a día.</p>
+      <p class="price">$45.000</p>
+      <div class="tallas">
+        <span class="talla-label">Talle:</span>
+        <div class="talla-btns">
+          <button class="talla-btn">36</button><button class="talla-btn">37</button>
+          <button class="talla-btn">38</button><button class="talla-btn">39</button>
+          <button class="talla-btn">40</button><button class="talla-btn">41</button>
+          <button class="talla-btn">42</button>
+        </div>
+      </div>
+      <button class="fav-btn">🤍</button>
+      <button class="add-cart">Agregar</button>
+    </div>
+
+    <div class="card fade-in">
+      <img src="bota2.jpg" alt="Bota Gamuza Gris">
+      <div class="card-badge badge-nuevo">NUEVO</div><h3>Bota Gamuza Gris</h3>
+      <p class="card-desc">Gamuza suave al tacto, caña larga, planta baja. Perfecta para looks casuales.</p>
+      <p class="price">$50.000</p>
+      <div class="tallas">
+        <span class="talla-label">Talle:</span>
+        <div class="talla-btns">
+          <button class="talla-btn">36</button><button class="talla-btn">37</button>
+          <button class="talla-btn">38</button><button class="talla-btn">39</button>
+          <button class="talla-btn">40</button><button class="talla-btn">41</button>
+          <button class="talla-btn">42</button>
+        </div>
+      </div>
+      <button class="fav-btn">🤍</button>
+      <button class="add-cart">Agregar</button>
+    </div>
+
+    <div class="card fade-in">
+      <img src="https://images.pexels.com/photos/1478442/pexels-photo-1478442.jpeg?w=600" alt="Bota Cuero Marrón">
+      <div class="card-badge badge-oferta">OFERTA</div><h3>Bota Cuero Marrón</h3>
+      <p class="card-desc">Estilo western, cuero genuino, suela antideslizante. Resistente y con mucho carácter.</p>
+      <p class="price">$55.000</p>
+      <div class="tallas">
+        <span class="talla-label">Talle:</span>
+        <div class="talla-btns">
+          <button class="talla-btn">36</button><button class="talla-btn">37</button>
+          <button class="talla-btn">38</button><button class="talla-btn">39</button>
+          <button class="talla-btn">40</button><button class="talla-btn">41</button>
+          <button class="talla-btn">42</button>
+        </div>
+      </div>
+      <button class="fav-btn">🤍</button>
+      <button class="add-cart">Agregar</button>
+    </div>
+
+    <div class="card fade-in">
+      <img src="https://images.pexels.com/photos/1152077/pexels-photo-1152077.jpeg?w=600" alt="Bota Caña Alta Beige">
+      <div class="card-badge badge-nuevo">NUEVO</div><h3>Bota Caña Alta Beige</h3>
+      <p class="card-desc">Caña alta hasta la rodilla, gamuza beige, taco cuadrado de 5cm. Elegante y cómoda.</p>
+      <p class="price">$60.000</p>
+      <div class="tallas">
+        <span class="talla-label">Talle:</span>
+        <div class="talla-btns">
+          <button class="talla-btn">36</button><button class="talla-btn">37</button>
+          <button class="talla-btn">38</button><button class="talla-btn">39</button>
+          <button class="talla-btn">40</button><button class="talla-btn">41</button>
+          <button class="talla-btn">42</button>
+        </div>
+      </div>
+      <button class="fav-btn">🤍</button>
+      <button class="add-cart">Agregar</button>
+    </div>
+
+    <div class="card fade-in">
+      <img src="https://images.pexels.com/photos/2562992/pexels-photo-2562992.png?w=600" alt="Bota Blanca Suela Gruesa">
+      <div class="card-badge badge-tendencia">TENDENCIA</div><h3>Bota Blanca Suela Gruesa</h3>
+      <p class="card-desc">Suela chunky ultraliviana, caña corta, cierre lateral. Tendencia de temporada.</p>
+      <p class="price">$52.000</p>
+      <div class="tallas">
+        <span class="talla-label">Talle:</span>
+        <div class="talla-btns">
+          <button class="talla-btn">36</button><button class="talla-btn">37</button>
+          <button class="talla-btn">38</button><button class="talla-btn">39</button>
+          <button class="talla-btn">40</button><button class="talla-btn">41</button>
+          <button class="talla-btn">42</button>
+        </div>
+      </div>
+      <button class="fav-btn">🤍</button>
+      <button class="add-cart">Agregar</button>
+    </div>
+
+    <div class="card fade-in">
+      <img src="https://images.pexels.com/photos/336372/pexels-photo-336372.jpeg?w=600" alt="Bota Negra Taco Fino">
+      <div class="card-badge badge-nuevo">NUEVO</div><h3>Bota Negra Taco Fino</h3>
+      <p class="card-desc">Cuero sintético, taco aguja de 7cm, caña media. Para una noche especial.</p>
+      <p class="price">$58.000</p>
+      <div class="tallas">
+        <span class="talla-label">Talle:</span>
+        <div class="talla-btns">
+          <button class="talla-btn">36</button><button class="talla-btn">37</button>
+          <button class="talla-btn">38</button><button class="talla-btn">39</button>
+          <button class="talla-btn">40</button><button class="talla-btn">41</button>
+          <button class="talla-btn">42</button>
+        </div>
+      </div>
+      <button class="fav-btn">🤍</button>
+      <button class="add-cart">Agregar</button>
+    </div>
+
+  </div>
+</section>
+
+<!--FAVORITOS-->
+<section class="favoritos" id="favoritos">
+  <h2>❤️ Tus Favoritos</h2>
+  <div class="grid" id="favorites-grid"></div>
+</section>
+
+<!--RESEÑAS-->
+<section class="resenas" id="resenas">
+  <h2>⭐ Lo que dicen nuestros clientes</h2>
+
+  <div class="resenas-grid">
+
+    <!-- RESEÑAS FIJAS -->
+    <div class="resena-card">
+      <div class="resena-stars">★★★★★</div>
+      <p class="resena-texto">"Las mejores botas que compré. Comodísimas y llegaron súper rápido. ¡Totalmente recomendadas!"</p>
+      <span class="resena-autor">— Valentina M.</span>
+    </div>
+
+    <div class="resena-card">
+      <div class="resena-stars">★★★★★</div>
+      <p class="resena-texto">"Calidad increíble para el precio. El cuero es hermoso y la atención fue excelente."</p>
+      <span class="resena-autor">— Lucía G.</span>
+    </div>
+
+    <div class="resena-card">
+      <div class="resena-stars">★★★★☆</div>
+      <p class="resena-texto">"Muy buenas botas, el diseño es elegante y moderno. Las uso todos los días."</p>
+      <span class="resena-autor">— Camila R.</span>
+    </div>
+
+    <!-- RESEÑAS DINÁMICAS -->
+    <div id="resenas-dinamicas"></div>
+
+  </div>
+
+  <!-- FORMULARIO -->
+  <div class="resena-form">
+    <h3>Dejá tu reseña</h3>
+
+    <input type="text" id="resena-nombre" placeholder="Tu nombre" maxlength="40">
+
+    <div class="estrellas-selector">
+      <span>Puntuación:</span>
+      <div class="estrella-btns">
+        <button class="estrella-btn" data-val="1">★</button>
+        <button class="estrella-btn" data-val="2">★</button>
+        <button class="estrella-btn" data-val="3">★</button>
+        <button class="estrella-btn" data-val="4">★</button>
+        <button class="estrella-btn" data-val="5">★</button>
+      </div>
+    </div>
+
+    <textarea id="resena-texto" placeholder="Contanos tu experiencia..." maxlength="200"></textarea>
+
+    <button id="resena-submit">Publicar reseña</button>
+  </div>
+
+</section>
+
+<!--SOBRE KAIRO-->
+<section class="sobre-kairo">
+  <div class="sobre-content">
+    <div class="sobre-texto">
+      <span class="sobre-tag">Nuestra historia</span>
+      <h2>Sobre KAIRO</h2>
+      <p>KAIRO nació del sueño de una pareja que comparte una misma pasión: la moda y todo lo que la rodea. Desde siempre nos entusiasmó el mundo de la vestimenta, buscar estilos, descubrir tendencias y encontrar esa prenda que hace sentir única a quien la usa.</p>
+      <p>Uno de nosotros tenía un sueño particular: crear su propia tienda de botas. No una tienda cualquiera, sino un espacio donde cada par cuente una historia y donde cada clienta encuentre exactamente lo que estaba buscando.</p>
+      <p>Hoy ese sueño es KAIRO. Un proyecto con alma, hecho con amor y con la convicción de que el estilo empieza desde los pies.</p>
+    </div>
+    <div class="sobre-deco">
+      <div class="sobre-card-deco">
+        <span>👟</span>
+        <p>Pasión por la moda</p>
+      </div>
+      <div class="sobre-card-deco">
+        <span>🤝</span>
+        <p>Proyecto de pareja</p>
+      </div>
+      <div class="sobre-card-deco">
+        <span>✨</span>
+        <p>Hecho con amor</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--FAQ-->
+<section class="faq" id="faq">
+  <h2>Preguntas frecuentes</h2>
+
+  <div class="faq-list">
+
+    <div class="faq-item">
+      <button class="faq-question">¿Hacen envíos? <span>+</span></button>
+      <div class="faq-answer">
+        <p>Sí, realizamos envíos a todo el país a través de correo privado. El costo y el tiempo de entrega varía según la localidad. Consultanos por WhatsApp para más detalles.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">¿Cómo puedo pagar? <span>+</span></button>
+      <div class="faq-answer">
+        <p>Aceptamos transferencia bancaria y Mercado Pago. Una vez que finalizás tu pedido por WhatsApp te enviamos los datos de pago.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">¿Puedo cambiar el talle si no me queda? <span>+</span></button>
+      <div class="faq-answer">
+        <p>Sí, aceptamos cambios dentro de los 7 días de recibido el producto, siempre que esté en perfectas condiciones y sin uso. El envío del cambio corre por cuenta del comprador.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">¿Los talles son estándar? <span>+</span></button>
+      <div class="faq-answer">
+        <p>Sí, manejamos numeración europea estándar del 36 al 42. Si tenés dudas sobre tu talle, no dudes en consultarnos antes de comprar.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">¿Cuánto tarda en llegar mi pedido? <span>+</span></button>
+      <div class="faq-answer">
+        <p>Una vez confirmado el pago, el pedido se despacha dentro de las 48 horas hábiles. Los tiempos de entrega dependen del correo y la localidad, generalmente entre 3 y 7 días hábiles.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">¿Las fotos son del producto real? <span>+</span></button>
+      <div class="faq-answer">
+        <p>Sí, todas las fotos son de los productos reales que tenemos en stock. Nos esforzamos para que lo que ves sea exactamente lo que recibís.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!--FOOTER-->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- MARCA -->
+    <div class="footer-brand">
+      <h2 class="footer-logo">KAIRO</h2>
+      <p class="footer-slogan">Comodidad y estilo en cada paso.</p>
+    </div>
+
+    <!-- LINKS -->
+    <div class="footer-links">
+      <h4>Navegación</h4>
+      <a href="#">Inicio</a>
+      <a href="#products">Productos</a>
+      <a href="#favoritos">Favoritos</a>
+      <a href="#resenas">Reseñas</a>
+    </div>
+
+    <!-- CONTACTO -->
+    <div class="footer-contact">
+      <h4>Contacto</h4>
+      <a href="https://wa.me/541122372040" target="_blank">📱 WhatsApp</a>
+      <a href="https://instagram.com/" target="_blank">📸 Instagram</a>
+      <a href="mailto:kairoboots@gmail.com">✉️ kairoboots@gmail.com</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 KAIRO. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!--SCRIPTS-->
+<script>
+/* ========================
+   SIDEBAR
+======================== */
+const menuBtn = document.getElementById("menu-btn");
+const sidebar = document.getElementById("sidebar");
+
+menuBtn.onclick = () => sidebar.classList.toggle("active");
+</script>
+
+<script>
+/* ========================
+   CARRITO
+======================== */
+const cartBtn    = document.getElementById("cart-btn");
+const cart       = document.getElementById("cart");
+const cartItems  = document.getElementById("cart-items");
+const cartCount  = document.getElementById("cart-count");
+const cartTotal  = document.getElementById("cart-total");
+const buyBtn     = document.getElementById("buy-btn");
+const cartAnim   = document.getElementById("cart-anim");
+
+let cartData = JSON.parse(localStorage.getItem("cart")) || [];
+
+function updateCart() {
+  cartItems.innerHTML = "";
+  let total = 0;
+
+  if (cartData.length === 0) {
+    cartItems.innerHTML = `<p class="cart-empty">Tu carrito está vacío 🛒</p>`;
+  } else {
+    cartData.forEach((item, index) => {
+      total += item.price;
+      const div = document.createElement("div");
+      div.classList.add("cart-item");
+      div.innerHTML = `
+        <div class="cart-item-info">
+          <span class="cart-item-title">${item.title}</span>
+          ${item.talla ? `<span class="cart-item-talla">Talle ${item.talla}</span>` : ""}
+        </div>
+        <div class="cart-item-right">
+          <span>$${item.price}</span>
+          <button>❌</button>
+        </div>
+      `;
+      div.querySelector("button").onclick = () => {
+        cartData.splice(index, 1);
+        saveCart();
+      };
+      cartItems.appendChild(div);
+    });
+  }
+
+  cartCount.textContent = cartData.length;
+  cartTotal.textContent = total.toLocaleString("es-AR");
+}
+
+function saveCart() {
+  localStorage.setItem("cart", JSON.stringify(cartData));
+  updateCart();
+}
+
+function addToCart(title, price, talla) {
+  cartData.push({ title, price, talla });
+  saveCart();
+  showCartAnim();
+}
+
+/* Animación "Agregado al carrito" */
+function showCartAnim() {
+  cartAnim.classList.add("show");
+  setTimeout(() => cartAnim.classList.remove("show"), 2000);
+}
+
+/* Botones agregar */
+document.querySelectorAll(".add-cart").forEach(btn => {
+  btn.onclick = () => {
+    const card  = btn.closest(".card");
+    const title = card.querySelector("h3").textContent;
+    const price = parseInt(card.querySelector(".price").textContent.replace(/[^0-9]/g, ""));
+    const tallaActiva = card.querySelector(".talla-btn.active");
+
+    if (!tallaActiva) {
+      alert("Por favor seleccioná un talle");
+      return;
+    }
+
+    addToCart(title, price, tallaActiva.textContent);
+  };
+});
+
+cartBtn.onclick = () => cart.classList.toggle("active");
+document.getElementById("close-cart").onclick = () => cart.classList.remove("active");
+
+/* Finalizar compra */
+buyBtn.onclick = () => {
+  if (cartData.length === 0) return alert("El carrito está vacío");
+
+  let message = "Hola, quiero comprar:\n";
+  cartData.forEach(item => {
+    message += `- ${item.title}${item.talla ? ` (Talle ${item.talla})` : ""} ($${item.price})\n`;
+  });
+  message += `Total: $${cartTotal.textContent}`;
+
+  window.open(`https://wa.me/541122372040?text=${encodeURIComponent(message)}`);
+};
+
+updateCart();
+</script>
+
+<script>
+/* ========================
+   TALLAS
+======================== */
+document.querySelectorAll(".talla-btns").forEach(group => {
+  group.querySelectorAll(".talla-btn").forEach(btn => {
+    btn.onclick = () => {
+      group.querySelectorAll(".talla-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+    };
+  });
+});
+</script>
+
+<script>
+/* ========================
+   FAVORITOS
+======================== */
+const favGrid = document.getElementById("favorites-grid");
+
+function bindFavBtn(btn, card, isClone = false) {
+  btn.onclick = () => {
+    const title = card.querySelector("h3").textContent;
+
+    if (isClone) {
+      card.remove();
+      const original = [...document.querySelectorAll(".products .fav-btn")].find(
+        b => b.closest(".card").querySelector("h3").textContent === title
+      );
+      if (original) original.textContent = "🤍";
+      return;
+    }
+
+    const existing = [...favGrid.children].find(
+      item => item.querySelector("h3") && item.querySelector("h3").textContent === title
+    );
+
+    if (existing) {
+      existing.remove();
+      btn.textContent = "🤍";
+      return;
+    }
+
+    btn.textContent = "❤️";
+    const clone = card.cloneNode(true);
+
+    clone.querySelector(".add-cart").onclick = () => {
+      const t = clone.querySelector("h3").textContent;
+      const p = parseInt(clone.querySelector(".price").textContent);
+      const tallaActiva = clone.querySelector(".talla-btn.active");
+      if (!tallaActiva) { alert("Por favor seleccioná un talle"); return; }
+      addToCart(t, p, tallaActiva.textContent);
+    };
+
+    clone.querySelectorAll(".talla-btn").forEach(b => {
+      b.onclick = () => {
+        clone.querySelectorAll(".talla-btn").forEach(x => x.classList.remove("active"));
+        b.classList.add("active");
+      };
+    });
+
+    bindFavBtn(clone.querySelector(".fav-btn"), clone, true);
+    favGrid.appendChild(clone);
+  };
+}
+
+document.querySelectorAll(".products .card").forEach(card => {
+  bindFavBtn(card.querySelector(".fav-btn"), card);
+});
+</script>
+
+<script>
+/* ========================
+   RESEÑAS
+======================== */
+let resenas = JSON.parse(localStorage.getItem("resenas")) || [];
+let estrellaSeleccionada = 0;
+
+const estrellaBtns = document.querySelectorAll(".estrella-btn");
+const resenasDiv   = document.getElementById("resenas-dinamicas");
+
+estrellaBtns.forEach(btn => {
+  btn.onclick = () => {
+    estrellaSeleccionada = parseInt(btn.dataset.val);
+    estrellaBtns.forEach((b, i) => {
+      b.classList.toggle("active", i < estrellaSeleccionada);
+    });
+  };
+});
+
+function renderResenas() {
+  resenasDiv.innerHTML = "";
+  resenas.forEach(r => {
+    const div = document.createElement("div");
+    div.classList.add("resena-card", "resena-nueva");
+    div.innerHTML = `
+      <div class="resena-stars">${"★".repeat(r.estrellas)}${"☆".repeat(5 - r.estrellas)}</div>
+      <p class="resena-texto">"${r.texto}"</p>
+      <span class="resena-autor">— ${r.nombre}</span>
+    `;
+    resenasDiv.appendChild(div);
+  });
+}
+
+document.getElementById("resena-submit").onclick = () => {
+  const nombre = document.getElementById("resena-nombre").value.trim();
+  const texto  = document.getElementById("resena-texto").value.trim();
+
+  if (!nombre || !texto || estrellaSeleccionada === 0) {
+    alert("Por favor completá todos los campos y elegí una puntuación.");
+    return;
+  }
+
+  resenas.push({ nombre, texto, estrellas: estrellaSeleccionada });
+  localStorage.setItem("resenas", JSON.stringify(resenas));
+
+  document.getElementById("resena-nombre").value = "";
+  document.getElementById("resena-texto").value  = "";
+  estrellaSeleccionada = 0;
+  estrellaBtns.forEach(b => b.classList.remove("active"));
+
+  renderResenas();
+};
+
+renderResenas();
+</script>
+
+<button id="scroll-top" title="Volver arriba">↑</button>
+
+<script>
+/* ========================
+   MODAL FOTO
+======================== */
+const imgModal = document.getElementById("img-modal");
+const imgModalImg = document.getElementById("img-modal-img");
+const imgModalTitle = document.getElementById("img-modal-title");
+const imgModalClose = document.getElementById("img-modal-close");
+const imgModalOverlay = document.querySelector(".img-modal-overlay");
+
+document.querySelectorAll(".card img").forEach(img => {
+  img.style.cursor = "zoom-in";
+  img.onclick = () => {
+    imgModalImg.src = img.src;
+    imgModalTitle.textContent = img.closest(".card").querySelector("h3").textContent;
+    imgModal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  };
+});
+
+function closeModal() {
+  imgModal.classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+imgModalClose.onclick = closeModal;
+imgModalOverlay.onclick = closeModal;
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
+</script>
+
+<script>
+/* ========================
+   FAQ ACORDEÓN
+======================== */
+document.querySelectorAll(".faq-question").forEach(btn => {
+  btn.onclick = () => {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains("open");
+    document.querySelectorAll(".faq-item").forEach(i => {
+      i.classList.remove("open");
+      i.querySelector(".faq-question span").textContent = "+";
+    });
+    if (!isOpen) {
+      item.classList.add("open");
+      btn.querySelector("span").textContent = "−";
+    }
+  };
+});
+</script>
+
+<script>
+/* ========================
+   ANIMACIONES SCROLL
+======================== */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+
+/* BOTÓN SCROLL TOP */
+const scrollTopBtn = document.getElementById("scroll-top");
+window.addEventListener("scroll", () => {
+  scrollTopBtn.classList.toggle("visible", window.scrollY > 400);
+});
+scrollTopBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+/* CONTADOR FAVORITOS */
+function updateFavCount() {
+  const count = favGrid.children.length;
+  const existing = document.getElementById("fav-count");
+  if (existing) existing.remove();
+  if (count > 0) {
+    const badge = document.createElement("span");
+    badge.id = "fav-count";
+    badge.className = "fav-count-badge";
+    badge.textContent = count;
+    document.querySelector(".favoritos h2").appendChild(badge);
+  }
+}
+
+const origRenderFav = window.updateFavCount;
+const favObserver = new MutationObserver(updateFavCount);
+favObserver.observe(favGrid, { childList: true });
+</script>
+
+</body>
+</html>
